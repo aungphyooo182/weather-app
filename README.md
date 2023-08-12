@@ -100,7 +100,7 @@ https://github.com/aungphyooo182/weather-app/tree/master
 
 ### 5. Deployed App URL:
 
-Share the URL where the Weather App is deployed and accessible online.
+https://weather-app-two-alpha-83.vercel.app/
 
 ### 6. Conclusion:
 
