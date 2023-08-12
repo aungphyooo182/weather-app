@@ -1,70 +1,95 @@
-# Getting Started with Create React App
+## Setup Document:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### 1. Introduction:
 
-## Available Scripts
+The Weather App is a web application built using the React framework and a combination of APIs, including UNSPLASH_API, openweathermap API, wft-geo-db.p.rapidapi API, to provide users with up-to-date weather information and a visually appealing experience. The primary purpose of the Weather App is to allow users to quickly access current weather conditions for their current location or any other city they wish to search for, along with a 7-day forecast and an accompanying background image that reflects the selected city's atmosphere.
 
-In the project directory, you can run:
+Key Features:
 
-### `npm start`
+1. **Current Weather**: Users can instantly view the current weather conditions of their current location upon opening the app. This includes details such as temperature, humidity, wind speed, and weather conditions (e.g., sunny, rainy, cloudy).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+2. **City Search**: The app enables users to search for weather information in other cities by typing in the city name. The app utilizes the wft-geo-db.p.rapidapi API to provide autocomplete suggestions as the user types.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+3. **7-Day Forecast**: Users can access a comprehensive 7-day weather forecast for any selected city. This forecast includes daily temperature highs and lows, as well as expected weather conditions.
 
-### `npm test`
+4. **City Background Image**: To enhance the user experience, the app dynamically fetches background images from the UNSPLASH_API based on the selected city. This visually appealing feature adds context and atmosphere to the weather information.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+5. **User Location Detection**: The app uses the react-geolocated package to detect the user's current location and display the weather information accordingly.
 
-### `npm run build`
+6. **Loading Indicator**: The react-loader-progressbar package is implemented to provide a loading indicator while fetching weather data from the APIs, ensuring a smooth user experience.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+7. **Enhanced UI Components**: The app integrates react-select-async-paginate and react-accessible-accordion components to improve the user interface. The former helps manage asynchronous city search suggestions, while the latter enhances the collapsible sections for weather details.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Technologies Used:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- React: A popular JavaScript library for building user interfaces.
+- UNSPLASH_API: Used to retrieve background images based on city names.
+- openweathermap API: Provides weather data for the specified cities.
+- wft-geo-db.p.rapidapi API: Offers city search autocomplete suggestions and geographical data.
+- CSS: Used for styling and layout of the app.
+- react-select-async-paginate: Enhances city search functionality.
+- react-accessible-accordion: Improves the accordion-style weather details section.
+- react-geolocated: Facilitates user location detection.
+- react-loader-progressbar: Displays loading indicators during API calls.
 
-### `npm run eject`
+In summary, the Weather App is designed to deliver accurate and visually appealing weather information to users through a combination of React components and various APIs, creating an engaging and user-friendly experience for checking weather conditions and forecasts in different cities.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 2. Prerequisites:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Node.js and npm (Node Package Manager) installed
+- Git installed
+- API key from the weather API provider
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 3. Installation Steps:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+The step-by-step process to install and set up the project locally. This may include:
 
-## Learn More
+1. Clone the repository from GitHub: `git clone <repo_url>`
+2. Navigate to the project directory: `cd weather-app`
+3. Install dependencies: `npm install`
+4. Create a `.env` file and add your API key: `REACT_APP_API_KEY=<your_api_key>`
+5. Start the development server: `npm start`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 4. Configuration:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Explain any configuration files or settings that need to be modified, if applicable. For example, if the weather API has different endpoints for development and production environments.
 
-### Code Splitting
+### 5. Usage:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+How to use the Weather App once it's set up:
 
-### Analyzing the Bundle Size
+- Open a web browser
+- Navigate to `http://localhost:3000`
+- Use the search bar to find and select a city
+- View the current weather and weather forecasts for the selected city
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Delivery Document:
 
-### Making a Progressive Web App
+### 1. Introduction:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+The Weather App is a web application built using the React framework and a combination of APIs, including UNSPLASH_API, openweathermap API, wft-geo-db.p.rapidapi API, to provide users with up-to-date weather information and a visually appealing experience. The primary purpose of the Weather App is to allow users to quickly access current weather conditions for their current location or any other city they wish to search for, along with a 7-day forecast and an accompanying background image that reflects the selected city's atmosphere.
 
-### Advanced Configuration
+### 2. Deployment:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Provide step-by-step instructions for deploying the Weather App. Since you mentioned using Vercel, you can guide the reader through deploying the app to Vercel:
 
-### Deployment
+1. Log in to Vercel (create an account if needed).
+2. Create a new project and connect it to your GitHub repository.
+3. Configure the deployment settings, such as environment variables (API key) and build settings.
+4. Deploy the app to a Vercel domain.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### 3. Testing:
 
-### `npm run build` fails to minify
+Provide guidance on how to perform a quick test of the deployed app to ensure everything is working as expected.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### 4. GitHub Repository:
+
+Share the link to your public GitHub repository where the project code is hosted.
+
+### 5. Deployed App URL:
+
+Share the URL where the Weather App is deployed and accessible online.
+
+### 6. Conclusion:
+
+Summarize the document, thank the reader, and encourage them to provide feedback or contact you if they encounter any issues.
