@@ -52,7 +52,7 @@ The step-by-step process to install and set up the project locally. This may inc
 
 ### 4. Configuration:
 
-Explain any configuration files or settings that need to be modified, if applicable. For example, if the weather API has different endpoints for development and production environments.
+If the weather API has different endpoints for development and production environments, change in .env-cmdrc.json file.
 
 ### 5. Usage:
 
@@ -80,11 +80,23 @@ Provide step-by-step instructions for deploying the Weather App. Since you menti
 
 ### 3. Testing:
 
-Provide guidance on how to perform a quick test of the deployed app to ensure everything is working as expected.
+**Location Services and Error Handling:**
+In the event that location services are not enabled on the testing devices, an error message will be displayed, and the app won't be able to detect the current location. To ensure accurate functionality, we recommend enabling location services.
+
+**Current Location Detection:**
+Upon granting permission for location services, the app will seamlessly detect the current location and subsequently display the corresponding weather data.
+
+**Supported Cities and API Compatibility:**
+Please be aware that the availability of weather data may vary for different cities due to the limitations of our API provider. It is advisable to search for cities that are supported by the API provider to ensure accurate and reliable weather information.
+
+**Background Image Loading:**
+Please allow a moment for the background image to load after selecting a city. The loading time may vary based on network conditions, but we're committed to delivering a visually appealing experience to enhance your interaction with the app.
+
+Thank you for your cooperation and understanding as we strive to provide you with the best possible user experience.
 
 ### 4. GitHub Repository:
 
-Share the link to your public GitHub repository where the project code is hosted.
+https://github.com/aungphyooo182/weather-app/tree/master
 
 ### 5. Deployed App URL:
 
@@ -92,4 +104,13 @@ Share the URL where the Weather App is deployed and accessible online.
 
 ### 6. Conclusion:
 
-Summarize the document, thank the reader, and encourage them to provide feedback or contact you if they encounter any issues.
+In conclusion, the document provides a comprehensive overview of the Weather App, its purpose, key features, technologies utilized, and important considerations such as location services, city support, and background image loading. We greatly appreciate your time and interest in our application.
+
+Your feedback is invaluable to us as we continuously work to enhance the app's functionality and user experience. If you come across any issues, have suggestions for improvement, or simply want to share your thoughts, please don't hesitate to reach out. Your input will aid us in refining the Weather App to better meet your needs.
+
+Thank you once again for your attention, and we look forward to serving you better with each interaction.
+
+Best regards,
+
+Aung Phyo Oo
+Contact : aungphyooo182@gmail.com

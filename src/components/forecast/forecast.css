@@ -103,4 +103,7 @@
   .daily-item {
     padding: 8px;
   }
+  .day {
+    flex: unset;
+  }
 }

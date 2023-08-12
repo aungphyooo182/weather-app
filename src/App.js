@@ -17,7 +17,7 @@ function App() {
   const [imageLoaded, setImageLoaded] = useState(false);
   const [error, setError] = useState(null);
 
-  const { coords } =
+  const { coords, isGeolocationAvailable, isGeolocationEnabled } =
     useGeolocated({
       positionOptions: {
         enableHighAccuracy: false,
@@ -45,6 +45,7 @@ function App() {
   }
 
   const handleOnSearchChange = (searchData) => {
+    setError(null);
     setLoading(true);
     setImageUrl(null);
     const [lat, lon] = searchData.value.split(" ");
@@ -52,7 +53,7 @@ function App() {
   };
 
   const handleOnSearchError = (err) => {
-    setError(err);
+    setError('API sometimes fails to load cities. Please try again.');
   }
 
   const defaultCity = () => {
@@ -71,11 +72,14 @@ function App() {
 
       if (response.ok) {
         const data = await response.json();
-        if (data.results) {
+        if (data.results.length > 0) {
           setImageUrl(decodeURI(data.results[0].urls.regular))
+          setLoading(false);
+        } else {
           setLoading(false);
         }
       } else {
+        setError('Background Image API failed to load. Please try again.')
         console.error('Error fetching photos:', response.status);
       }
     } catch (error) {
@@ -85,12 +89,16 @@ function App() {
   }
 
   useEffect(() => {
-    if (coords) {
+    if (coords && isGeolocationAvailable && isGeolocationEnabled) {
       defaultCity()
+    } else if (!isGeolocationAvailable) {
+      setError('Geolocation is not available. For better experience, please allow location access.')
+    } else if (!isGeolocationEnabled) {
+      setError('Geolocation is not enabled. For better experience, please allow location access.')
     }
     return () => {
     }
-  }, [coords])
+  }, [coords, isGeolocationAvailable, isGeolocationEnabled])
 
   useEffect(() => {
     const img = new Image();
